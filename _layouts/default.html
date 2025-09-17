@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  
+  {% seo %}
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container">
+      <div class="nav-wrapper">
+        <div class="logo">
+          <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Allegheny Biosciences" height="50">
+        </div>
+        <div class="nav-links">
+          <a href="#mission">Mission</a>
+          <a href="#about">About</a>
+          <a href="#why">Why I Started This</a>
+          <a href="#signup" class="nav-cta">Get Updates</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <main class="container">
+    {{ content }}
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Allegheny Biosciences, LLC. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Simple smooth scroll -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
