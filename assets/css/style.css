@@ -5,9 +5,10 @@
   --accent-green: #3AB795;
   --text-dark: #2C3E50;
   --text-light: #5D6D7E;
-  --bg-light: #F8F9FA;
+  --bg-light: #F0F2F5;  /* Darker than before (was #F8F9FA) */
+  --bg-section: #E8EAED;  /* For alternating sections */
   --white: #FFFFFF;
-  --border-light: #E8E8E8;
+  --border-light: #D8DADD;  /* Adjusted to match darker background */
 }
 
 /* Reset and Base */
@@ -22,6 +23,7 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   font-size: 16px;
+  background-color: var(--bg-light);  /* Apply darker background to entire body */
 }
 
 .container {
@@ -32,24 +34,37 @@ body {
 
 /* Header */
 .site-header {
-  background: var(--white);
-  border-bottom: 1px solid var(--border-light);
+  background: var(--primary-teal);
+  border-bottom: none;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .logo img {
-  height: 50px;
+  height: 70px;
   width: auto;
+}
+
+.logo-text {
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .nav-links {
@@ -59,33 +74,35 @@ body {
 }
 
 .nav-links a {
-  color: var(--text-dark);
+  color: var(--white);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--primary-teal);
+  opacity: 0.8;
 }
 
 .nav-cta {
   background: var(--accent-amber);
   color: var(--white) !important;
-  padding: 8px 20px;
+  padding: 10px 24px;
   border-radius: 5px;
   transition: background 0.3s ease;
+  font-weight: 600;
 }
 
 .nav-cta:hover {
   background: #E67E22 !important;
+  opacity: 1 !important;
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
   padding: 80px 0;
-  background: linear-gradient(135deg, rgba(0,113,127,0.05) 0%, rgba(58,183,149,0.05) 100%);
+  background: var(--white);  /* Keep hero white for contrast */
 }
 
 .hero-title {
@@ -115,6 +132,15 @@ body {
 /* Sections */
 section {
   padding: 60px 0;
+}
+
+/* Alternate section backgrounds */
+section:nth-of-type(even) {
+  background: var(--white);
+}
+
+section:nth-of-type(odd) {
+  background: var(--bg-light);
 }
 
 section h2 {
@@ -148,10 +174,12 @@ section p {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
+  border: 1px solid var(--border-light);
 }
 
 .point:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .point h3 {
@@ -168,7 +196,7 @@ section p {
 
 /* Focus Areas */
 .focus-areas {
-  background: var(--bg-light);
+  background: var(--white);  /* Keep this white since it was odd */
 }
 
 .areas-grid {
@@ -179,7 +207,7 @@ section p {
 }
 
 .area-card {
-  background: var(--white);
+  background: var(--bg-light);
   padding: 1.5rem;
   border-radius: 8px;
   border-left: 4px solid var(--accent-amber);
@@ -218,7 +246,7 @@ section p {
   color: var(--white);
   text-align: center;
   padding: 2rem 0;
-  margin-top: 4rem;
+  margin-top: 0;  /* Remove margin since sections handle spacing */
 }
 
 .site-footer p {
@@ -237,8 +265,12 @@ section p {
     font-size: 1.1rem;
   }
   
+  .logo-text {
+    display: none;  /* Hide company name on mobile to save space */
+  }
+  
   .nav-links {
-    display: none; /* You may want to add a mobile menu later */
+    display: none;
   }
   
   .key-points {
