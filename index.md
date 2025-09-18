@@ -15,7 +15,7 @@ title: Home
 
 <section class="mission" id="mission">
   <h2>Mission</h2>
-  <p>Allegheny Biosciences is a mission-driven company focused on bringing more and better drugs to market. The platform makes advanced drug discovery tools accessible to researchers everywhere, particularly for the challenges that matter most: antibiotic resistance, pandemic preparedness, rare diseases, and chronic conditions affecting millions.</p>
+  <p>Allegheny Biosciences is a mission-driven company focused on bringing more and better drugs to market. The platform makes advanced drug discovery tools accessible to researchers everywhere, particularly for urgent challenges such as: antibiotic resistance, pandemic preparedness, rare diseases, and chronic conditions affecting millions.</p>
   
   <div class="key-points">
     <div class="point">
