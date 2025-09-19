@@ -1,7 +1,7 @@
 # Site settings
 title: Allegheny Biosciences
 description: Making Drug Discovery Accessible to Everyone
-url: "https://alleghenybiosciences.github.io"
+url: "https://alleghenybio.github.io"
 baseurl: ""
 
 # Build settings
