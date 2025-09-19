@@ -42,11 +42,11 @@ title: Home
 
 <section class="story" id="why">
   <h2>Why I Started This</h2>
-  <p>With a background in biochemistry and clinical pharmacy experience, I've seen the different sides of therapeutics from the bench to the bedside. I know firsthand what effective drugs can do to positively impact lives, while also witnessing the challenges of adverse effects, poor compliance, and patient harm.</p>
+  <p>With a background in biochemistry and clinical pharmacy, I've seen the different sides of therapeutics from the bench to the bedside. I know firsthand how effective medications improve and extend patients' lives. I've also seen the other reality: even commonly used drugs can cause serious adverse effects, complex regimens patients struggle to understand and follow, and unintended harm despite careful monitoring.</p>
   
-  <p>Modern tools can generate millions of molecules, but that's far from the end of the story. The real challenge is choosing the most promising candidates, optimizing their properties, and ensuring they can actually be made and tested.</p>
+  <p>These experiences drive me to explore how computational approaches can accelerate the discovery of better therapeutics. Modern tools can generate millions of molecules, but that's far from the end of the story. The real challenge is choosing the most promising candidates, optimizing their properties, and ensuring they can actually be made and tested.</p>
   
-  <p>Allegheny Biosciences exists to bridge this gap, making sophisticated drug discovery accessible to the researchers, startups, and institutions working on humanity's most pressing health challenges.</p>
+  <p>Allegheny Biosciences exists to bridge this gap, making sophisticated drug discovery accessible to the researchers, startups, and organizations working on humanity's most pressing health challenges.</p>
 </section>
 
 <section class="focus-areas">
